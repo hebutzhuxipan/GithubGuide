@@ -7,7 +7,7 @@
 5> git remote add origin git@github.com:wangjiax9/practice.git //关联远程仓库,后面是去拷贝仓的地址，ssh
 6> git push -u origin master //把本地库的所有内容推送到远程库上
 
-/***git 提高命令***/
+/***git 打包命令***/
 1> git log //查看日志
 2> git format-patch -s "branchname" //生成patch
    或者
@@ -18,4 +18,10 @@
    git format-patch HEAD^^^^^ 	//<==不支持！！！！error！！
 3> git reset --hard "branchname"//回退版本
 4> patch -p1 < 0001-#######.patch //打补丁
+/***git 经过验证的打包命令***/
+1> (这一步是别人做)git format-patch -s "branchname" //生成patch,"branchname" 为git log 倒数第二个commit id
+2> git apply --reject "0001-test.patch" //应用patch 包，可能有错，warning不用管;如果没有错，测试应该是更改了；有错，需要手动更改
+3> git add .   "或者其他add" 
+4> git commit -m "commit"
+
  
