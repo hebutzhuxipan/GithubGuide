@@ -30,4 +30,21 @@
 	-df 删除 文件 和 目录
 	-xf删除当前目录下所有没有track过的文件. 不管他是否是.gitignore文件里面指定的文件夹和文件.
 
+/***git 撤销操作***/
+1> 工作区-暂存区-本地仓库-远程仓库
+   未修改（origin）- 已修改（modified）- 已暂存（staged）- 已提交（committed）- 已推送（pushed）
+2> 已修改，未暂存：
+   查看diff: git diff
+   撤销修改：git checkout .  或 git reset --hard
+3> 已暂存，未提交：git add .
+   查看diff: git diff --cached
+   撤销修改：git reset , git checkout . 或 git reset --hard
+4> 已提交，未推送：git add .
+   查看diff: git diff master origin/master 这里master 就是本地仓库，origin/master就是远程仓库
+   撤销修改：git reset --hard origin/master
+5> 已推送
+   撤销修改：git reset --hard HEAD^
+   			 git push -f
+
+
  
