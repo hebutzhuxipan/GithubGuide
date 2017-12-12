@@ -1,4 +1,4 @@
-　　
+﻿　　
 /***git 基本建仓，提交命令***/
 1> git init //把这个目录变成Git可以管理的仓库
 2> git add README.md //文件添加到仓库
@@ -45,6 +45,9 @@
 5> 已推送
    撤销修改：git reset --hard HEAD^
    			 git push -f
+
+/***git 建立****/
+1>git clone git@github.com:hebutzhuxipan/GithubGuide.git
 
 
  
