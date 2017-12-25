@@ -45,9 +45,20 @@
 5> 已推送
    撤销修改：git reset --hard HEAD^
    			 git push -f
+6> 终极武器 
+   git reflog
 
 /***git 建立****/
 1>git clone git@github.com:hebutzhuxipan/GithubGuide.git
+
+/***git diff ***/
+1> git diff > 1.diff (源)
+2> git apply 1.diff  （目的）
+//上面两者的前提是要有共同的 base commit
+//
+
+1>使用git bisect快速定位版本的错误
+
 
 
  
