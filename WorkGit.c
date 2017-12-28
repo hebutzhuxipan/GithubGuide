@@ -11,4 +11,4 @@ $ git fetch origin dev
 $ git rebase origin/dev
 
 推送当前分支到远程仓库进行代码review。
-$ git review -r origin dev_normalization --reviewers xnliu lizongkuan zmtian SunBo xhli clsun chwang
+$ git review -r origin dev_normalization --reviewers xnliu lizongkuan zmtian SunBo xhli clsun chwang blli

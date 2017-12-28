@@ -59,6 +59,13 @@
 
 1>使用git bisect快速定位版本的错误
 
+//基本操作
+1> 创建分支： $ git branch mybranch
+2> 切换分支： $ git checkout mybranch
+3> 创建并切换分支： $ git checkout -b mybranch
+4> 重命名本地分支：git branch -m oldname newname
+
+
 
 
  
