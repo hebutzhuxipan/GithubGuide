@@ -48,9 +48,6 @@
 6> 终极武器 
    git reflog
 
-/***git 建立****/
-1>git clone git@github.com:hebutzhuxipan/GithubGuide.git
-
 /***git diff ***/
 1> git diff > 1.diff (源)
 2> git apply 1.diff  （目的）
@@ -64,6 +61,29 @@
 2> 切换分支： $ git checkout mybranch
 3> 创建并切换分支： $ git checkout -b mybranch
 4> 重命名本地分支：git branch -m oldname newname
+
+/////////////////////////////////////////////////////////////////////////
+/***git 建立****/
+1> git clone git@github.com:hebutzhuxipan/GithubGuide.git
+
+问题1：
+fatal: Could not read from remote
+ repository.Please make sure you
+ have the correct access rights and the repository exists.
+解决1：出现这个问题是因为没有在github账号添加SSH key。
+$ ssh-keygen -t rsa -C "hebutzhuxipan"  //应该是可以复制本机的 id_rsa.pub 下的
+
+执行：
+$ ssh -T git@github.com
+问题2：ssh: connect to host github.com port 22: Connection timed out
+解决2：在.ssh文件夹下，新建一个config文件，记住把扩展名去掉。
+文件内容：
+Host github.com
+User hebut_zhuxipan@126.com
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
 
 
 
