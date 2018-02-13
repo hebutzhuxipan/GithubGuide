@@ -56,3 +56,9 @@ git 提交异常
 方案二
 还可以在 linux vim 新建文件，把代码编辑进去。
 
+——————————————————————————————————————————————————————————————
+
+git clone ssh://xpzhu@172.16.8.18:29418/code/fingerprint
+git clone ssh://xpzhu@114.242.104.200:7007/code/fingerprint
+
+

@@ -84,6 +84,20 @@ Hostname ssh.github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
 Port 443
+=======
+_____________________________________________________________
+
+git push origin 本地分支名称：sandbox/xpzhu/本地分支名称（远程分支）
+
+_____________________________________________________________
+
+/*拷贝代码 ，断电续传功能*/
+
+git clone 断线了，就会自动把下载的都删除掉；与其不同下面，即使断了也可以继续
+ 
+git init + git fetch + git checkout -b 
+断了就再 git fetch
+>>>>>>> git clone
 
 
 
