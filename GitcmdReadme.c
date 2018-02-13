@@ -97,9 +97,12 @@ git clone 断线了，就会自动把下载的都删除掉；与其不同下面�
  
 git init + git fetch + git checkout -b 
 断了就再 git fetch
->>>>>>> git clone
 
+__________________________________________
 
+/***********git rebase***********/
+
+网址：http://blog.csdn.net/wh_19910525/article/details/7554489
 
 
  
