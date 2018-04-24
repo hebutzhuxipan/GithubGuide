@@ -55,6 +55,40 @@
 //
 
 1>使用git bisect快速定位版本的错误
+/**************************************************/
+//例子
+Already on 'master'
+[root@jay-linux qemu.git]# git bisect start
+[root@jay-linux qemu.git]# git bisect good 079944e6
+[root@jay-linux qemu.git]# git bisect bad 4b274b16
+Bisecting: 55 revisions left to test after this (roughly 6 steps)
+[83f58e570f21c3e7227e7fbef1fc0e18b5ed7ea9] rtl8139: preserve link state across device reset
+[root@jay-linux qemu.git]# git bisect good
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[4a4343671e183824a3f5db76ad561ce01e6c6e0a] usb/ehci: Move capsbase and opregbase into SysBus EHCI class
+[root@jay-linux qemu.git]# git bisect good
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[507066f8a9610c0088df19ce7b3e436f43165ec1] qdev: Include qdev code into *-user, too
+[root@jay-linux qemu.git]# git bisect bad
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[c3dd94b129e222e00a4ed00689e11afdd85c740f] Merge remote-tracking branch 'stefanha/net' into staging
+[root@jay-linux qemu.git]# git bisect good
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[89eb147c2cfd2c797d3662aa2f55254441f0595a] uhci: stop using portio lists
+[root@jay-linux qemu.git]# git bisect bad
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[358d615b6908b4916c74819ffad823cb4a74314e] exynos4210: Add EHCI support
+[root@jay-linux qemu.git]# git bisect bad
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[aee7499a59d6778c10b018da41db4a22655ef8a8] usb/ehci: Add SysBus EHCI device for Exynos4210
+[root@jay-linux qemu.git]# git bisect bad
+aee7499a59d6778c10b018da41db4a22655ef8a8 is the first bad commit
+commit aee7499a59d6778c10b018da41db4a22655ef8a8
+Author: Jay <just for fun>
+Date:   Sun Dec 16 04:49:45 2012 +0100
+### just for testing.  ###
+
+/****************************************************/
 
 //基本操作
 1> 创建分支： $ git branch mybranch
@@ -103,6 +137,7 @@ __________________________________________
 /***********git rebase***********/
 
 网址：http://blog.csdn.net/wh_19910525/article/details/7554489
+
 
 
  
