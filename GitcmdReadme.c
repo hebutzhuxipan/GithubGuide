@@ -95,6 +95,7 @@ Date:   Sun Dec 16 04:49:45 2012 +0100
 2> 切换分支： $ git checkout mybranch
 3> 创建并切换分支： $ git checkout -b mybranch
 4> 重命名本地分支：git branch -m oldname newname
+5> 删除一个正打开的分支 git branch -d <branch_name> 
 
 /////////////////////////////////////////////////////////////////////////
 /***git 建立****/
